@@ -4,27 +4,6 @@
 
 ChatGPTFileResponderは、指定したディレクトリ内のファイルを検索し、ユーザーからの質問を返答するPythonベースのアプリケーションです。結果はデータベースにキャッシュされ、後で再利用することができます。
 
-# フォルダ構成
-.
-├── README.md  
-├── .env                    # 環境変数の設定ファイル  
-├── data                    # データ用ディレクトリ  
-│   ├── input               # 入力ファイルが保存されるディレクトリ  
-│   └── output              # 出力ファイルが保存されるディレクトリ  
-├── logs                    # ログファイル保存用ディレクトリ  
-│   └── app.log             # ログファイル  
-├── requirements.txt        # 必要なPythonパッケージ一覧  
-├── src                     # ソースコードディレクトリ  
-│   ├── chatgpt_api.py      # ChatGPT APIにテキストを送信し要約を生成するモジュール  
-│   ├── database.py         # データベース関連の処理を行うモジュール  
-│   ├── file_reader.py      # ファイルの読み取りを行うモジュール  
-│   ├── file_search.py      # ファイル検索を行うモジュール  
-│   ├── main.py             # メインの実行スクリプト  
-└── tests                   # テストコード用ディレクトリ  
-    ├── test_file_reader.py # file_reader.pyのテスト  
-    ├── test_file_search.py # file_search.pyのテスト  
-    └── test_main.py        # main.pyのテスト  
-
 # 主要ファイルの説明
 ## main.py
 アプリケーションのエントリーポイントです。ファイルパスと質問を入力し、該当ファイルの要約を生成します。
